@@ -28,8 +28,8 @@ const config =
         Author:  'Justin Don Byrne',
         Created: 'December, 6 2021',
         Library: 'JSON to Canvas: Visual Graph Generator',
-        Updated: 'December, 6 2021',
-        Version: '1.0.0',
+        Updated: 'December, 7 2021',
+        Version: '1.1.0',
     }
 }
 
@@ -58,6 +58,9 @@ function setupEnvironment()
 {
     document.getElementById("canvas").width  = `${config.domWindow.width}`;
     document.getElementById("canvas").height = `${config.domWindow.height}`;
+
+    document.getElementById("drop-zone").style.setProperty('margin-left', `${centerX( - (300 / 2) )}px`);
+    document.getElementById("drop-zone").style.setProperty('margin-top',  `${centerY( - (300 / 2) )}px`);
 
     document.title = config.about.Library + ' | ver: ' + config.about.Version;
 }
